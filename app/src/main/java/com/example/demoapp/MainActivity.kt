@@ -55,6 +55,9 @@ class MainActivity : AppCompatActivity() {
     private fun updatePlayerName(view: View){
         playerName.text = editPlayerName.text
 
+        editPlayerName.setText(" ")
+        editPlayerName.clearFocus()
+
         //Hide Keyboard
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
